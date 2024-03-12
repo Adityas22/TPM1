@@ -42,8 +42,6 @@ class LoginPage extends StatelessWidget {
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                // Implement login logic here
-                // Contoh sederhana: Cek apakah username dan password sesuai
                 if (usernameController.text == 'admin' &&
                     passwordController.text == 'admin') {
                   Navigator.push(
@@ -53,7 +51,6 @@ class LoginPage extends StatelessWidget {
                     ),
                   );
                 } else {
-                  // Tampilkan pesan error jika login gagal
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
                       content: Text('Login Gagal. Coba lagi.'),
@@ -78,14 +75,11 @@ class MainMenu extends StatelessWidget {
         title: Text('Main Menu'),
       ),
       body: Center(
-        // Wrap the Column with Center widget
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ElevatedButton(
               onPressed: () {
-                // Pindah ke halaman Data Kelompok
-                // Tambahkan logika atau widget sesuai kebutuhan
                 Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -97,8 +91,6 @@ class MainMenu extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
-                // Pindah ke halaman Penjumlahan dan Pengurangan Angka
-                // Tambahkan logika atau widget sesuai kebutuhan
                 Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -110,8 +102,6 @@ class MainMenu extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
-                // Pindah ke halaman Input Bilangan Ganjil/Genap
-                // Tambahkan logika atau widget sesuai kebutuhan
                 Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -129,7 +119,6 @@ class MainMenu extends StatelessWidget {
 }
 
 class DataKelompok extends StatelessWidget {
-  // Define your list of data kelompok here
   final List<Map<String, String>> dataKelompok = [
     {'name': 'Aditya Septiawan', 'nim': '123210014'},
     {'name': 'Rayhan Fairuz Sakha', 'nim': '123210028'},
@@ -238,11 +227,10 @@ class _GanjilGenapState extends State<GanjilGenap> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Cek Angka'),
-        // Tambahkan tombol kembali pada AppBar
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
-            Navigator.pop(context); // Navigasi kembali ke halaman sebelumnya
+            Navigator.pop(context);
           },
         ),
       ),
