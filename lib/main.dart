@@ -132,7 +132,7 @@ class DataKelompok extends StatelessWidget {
   // Define your list of data kelompok here
   final List<Map<String, String>> dataKelompok = [
     {'name': 'Aditya Septiawan', 'nim': '123210014'},
-    {'name': 'Rayhan Fairuz', 'nim': '123210023'},
+    {'name': 'Rayhan Fairuz Sakha', 'nim': '123210028'},
   ];
 
   @override
